@@ -1,0 +1,30 @@
+@import '../style/mixin.scss';
+@import '../style/variable.scss';
+
+.App {
+	display: grid;
+	gap: 20px;
+	grid-template-areas:
+		'TaskDescription CodeEditor'
+		'TaskDescription CodeValidator';
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	height: 100%;
+	width: 100%;
+	> div {
+		padding: 15px;
+	}
+	.error {
+		font-size: 50px;
+		background-color: red;
+	}
+	@media (max-width: 768px) {
+		grid-template-areas:
+			'TaskDescription'
+			'CodeEditor'
+			'CodeValidator';
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto;
+		height: unset;
+	}
+}

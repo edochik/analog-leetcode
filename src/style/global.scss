@@ -1,0 +1,18 @@
+@import 'normalize.css';
+@import './variable.scss';
+@import './mixin.scss';
+
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+#root {
+	@include container();
+}

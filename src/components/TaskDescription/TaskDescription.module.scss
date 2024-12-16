@@ -1,0 +1,23 @@
+@import '../../style/mixin.scss';
+@import '../../style/variable.scss';
+
+.TaskDescription {
+	@include border($border-color-3);
+	grid-area: TaskDescription;
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	.text {
+		font-size: clamp(22px, 4vw, 28px);
+		font-weight: 700;
+	}
+	.description {
+		font-size: clamp(18px, 2vw, 24px);
+	}
+	.task {
+		font-size: clamp(18px, 2vw, 24px);
+		padding: 15px 0;
+		text-align: center;
+		background-color: #f7f9fa;
+	}
+}

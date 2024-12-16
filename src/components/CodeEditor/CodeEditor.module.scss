@@ -1,0 +1,14 @@
+@import '../../style/mixin.scss';
+@import '../../style/variable.scss';
+
+.CodeEditor {
+	@include border($border-color-1);
+	grid-area: CodeEditor;
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	overflow: auto;
+	.list {
+		align-self: flex-start;
+	}
+}

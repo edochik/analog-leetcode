@@ -1,11 +1,16 @@
+
+@use './variable.scss' as var;
+
 @mixin border($color) {
 	border: 4px solid $color;
 	border-radius: 15px;
 }
 
 @mixin container() {
-	max-width: $container-max-width;
-	padding: $container-padding;
-	height: $container-height;
-	margin: $container-margin;
+	max-width: var.$container-max-width;
+	padding: var.$container-padding;
+	height: var.$container-height;
+	margin: var.$container-margin;
 }
+
+

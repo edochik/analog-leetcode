@@ -1,14 +1,13 @@
-@import '../../style/mixin.scss';
-@import '../../style/variable.scss';
+@use '../../style/mixin.scss';
+@use '../../style/variable.scss' as var;
 
 .CodeValidator {
 	position: relative;
-	@include border($border-color-2);
+	@include mixin.border(var.$border-color-2);
 	grid-area: CodeValidator;
 	display: flex;
 	flex-direction: column;
 	row-gap: 20px;
-	text-align: center;
 	.info {
 		flex-grow: 1;
 	}
@@ -19,7 +18,7 @@
 		border: none;
 		padding: 10px 20px;
 		border-radius: 15px;
-		color: $color-white;
+		color: var.$color-white;
 		font-weight: 700;
 		transition:
 			color 0.3s ease-in-out,
@@ -27,7 +26,7 @@
 		align-self: flex-end;
 		&:hover {
 			background-color: rgb(0, 128, 0, 0.5);
-			color: $color-black;
+			color: var.$color-black;
 		}
 		&:disabled {
 			cursor: none;
@@ -41,7 +40,7 @@
 		transform: translate(-50%, -50%);
 		font-size: clamp(18px, 4vw, 30px);
 	}
-	@media (max-width: $tablet) {
+	@media (max-width: var.$tablet) {
 		.button {
 			align-self: center;
 			padding: 10px 40px;
@@ -68,14 +67,29 @@
 	mask: var(--_m);
 	-webkit-mask-composite: source-out;
 	mask-composite: subtract;
-	animation: l3 1s infinite linear;
+	animation: animation-loader 1s infinite linear;
+	@media (max-width: var.$tablet) {
+		position: static;
+		transform: translate(0, 0);
+		animation: animation-loader-mobile 1s infinite linear;
+		align-self: center;
+	}
 }
 
-@keyframes l3 {
+@keyframes animation-loader {
 	0% {
 		transform: translate(-50%, -50%) rotate(0deg);
 	}
 	100% {
 		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+
+@keyframes animation-loader-mobile {
+	0% {
+		transform: rotate(0deg); 
+	}
+	100% {
+		transform: rotate(360deg);
 	}
 }

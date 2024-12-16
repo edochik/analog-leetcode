@@ -1,8 +1,8 @@
-@import '../../style/mixin.scss';
-@import '../../style/variable.scss';
+@use '../../style/mixin.scss';
+@use '../../style/variable.scss' as var;
 
 .CodeEditor {
-	@include border($border-color-1);
+	@include mixin.border(var.$border-color-1);
 	grid-area: CodeEditor;
 	display: flex;
 	flex-direction: column;

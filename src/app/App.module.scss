@@ -1,5 +1,5 @@
-@import '../style/mixin.scss';
-@import '../style/variable.scss';
+@use '../style/mixin.scss';
+@use '../style/variable.scss' as var;
 
 .App {
 	display: grid;
@@ -15,10 +15,10 @@
 		padding: 15px;
 	}
 	.error {
-		font-size: 50px;
+		font-size: clamp(22px, 4vw, 50px);
 		background-color: red;
 	}
-	@media (max-width: 768px) {
+	@media (max-width: var.$tablet) {
 		grid-template-areas:
 			'TaskDescription'
 			'CodeEditor'

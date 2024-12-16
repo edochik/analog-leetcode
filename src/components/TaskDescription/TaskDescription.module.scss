@@ -1,8 +1,8 @@
-@import '../../style/mixin.scss';
-@import '../../style/variable.scss';
+@use '../../style/mixin.scss';
+@use '../../style/variable.scss' as var;
 
 .TaskDescription {
-	@include border($border-color-3);
+	@include mixin.border(var.$border-color-3);
 	grid-area: TaskDescription;
 	display: flex;
 	flex-direction: column;

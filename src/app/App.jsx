@@ -12,7 +12,7 @@ function App() {
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
 
-  const fetchRequestTest = async () => {
+  const fetchTestCode = async () => {
     setLoader(true);
     setResult(null)
     setError(null)
@@ -41,7 +41,7 @@ function App() {
       {error && <div className={s.error}>{error}</div>}
       <TaskDescription />
       <CodeEditor code={code} setCode={setCode} setLanguage={setLanguage} setResult={setResult} />
-      <CodeValidator fetchRequestTest={fetchRequestTest} loader={loader} result={result} />
+      <CodeValidator fetchTestCode={fetchTestCode} loader={loader} result={result} />
     </div>
   )
 }

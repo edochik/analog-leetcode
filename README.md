@@ -1,4 +1,4 @@
-```python
+<!-- ```python
 def hello():
     print("Hello, world!")
 
@@ -17,4 +17,4 @@ func main() {
     fmt.Println("Hello, world!")
 }
 
-```
+``` -->

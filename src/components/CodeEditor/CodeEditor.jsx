@@ -35,7 +35,7 @@ const CodeEditor = (props) => {
 		</select>
 		<CodeMirror
 			value={code}
-			height="200px"
+			height="100%"
 			extensions={[langCodemirror]}
 			onChange={(newValue) => setCode(newValue)} />
 	</div>;

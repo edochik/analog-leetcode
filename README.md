@@ -8,9 +8,9 @@
 2. Окно исполнения кода с выбором языка python или go;
 3. Окно результата;
 
-После того как код напечатан можно запустить, нажав кнопку Run, запрос уйдет на сервер glitch
-Решение правильное выведет 'Hello world'
-Решение неправильное выведет 'SyntaxError: Unexpected token'
+После того как код напечатан можно запустить, нажав кнопку Run, запрос уйдет на сервер glitch.  
+Решение правильное выведет 'Hello world'  
+Решение неправильное выведет 'SyntaxError: Unexpected token'  
 
 Правильное решение для python:
 
@@ -36,15 +36,24 @@ func main() {
 
 ## Инструкция по запуску и развертыванию проекта
 
+1. git clone https://github.com/edochik/analog-leetcode.git
+2. npm install
+3. npm run dev
+4. проект запуститься http://localhost:5173/analog-leetcode/
 
 ## Инструкция по серверу
 
-Используется сервер glitch
-[Glitch](https://glitch.com/edit/#!/testing-mycode?path=server.js%3A32%3A32);
+Используется сервер [Glitch](https://glitch.com/edit/#!/testing-mycode?path=server.js%3A32%3A32)
 Логика работы сервера:
 
 1. Осуществляется проверка на язык.
 2. Код проверяется:
-- python, code.includes('print("Hello, world!")');
-- go, code.includes('fmt.Println("Hello, world!")')
+
+- python, code.includes('print("Hello, world!")')
+- go, code.includes('fmt.Println("Hello, world!")')  
 если данные строки присутствуют в проекте, будет выведено "Hello, world!"
+
+
+## Варианты расширения приложения
+1. Использовать state manager redux/toolkit.
+2. Реализовать проверку кода в реальной среде языка. 
